@@ -1,18 +1,8 @@
 import CheckoutCards from "@/components/Checkout/CheckoutCards";
 import CountDownTimer from "@/components/Checkout/CountDownTimer";
 import Header from "@/components/Shared/Header";
-import { ManyChatService } from "@/services/manychat";
-import { type Subscriber } from "@/types/subscriber";
 
-export default async function Checkout({
-  params,
-}: {
-  params: { subscriberId: string };
-}) {
-  const subscriber: Subscriber = await ManyChatService.getSubscriberInfo(
-    params.subscriberId
-  );
-
+export default async function Checkout() {
   return (
     <>
       <Header />
@@ -22,8 +12,7 @@ export default async function Checkout({
           <div className="w-full h-full flex flex-col-reverse gap-2 md:flex-row justify-between items-center max-w-4xl">
             <div className="w-full md:w-1/2 h-full flex flex-col md:gap-8 gap-6">
               <h1 className="text-3xl md:text-5xl text-white">
-                Hi {subscriber.first_name}, Your Discomfort-free Life begins
-                with a Single Step!
+                Hi, Your Discomfort-free Life begins with a Single Step!
               </h1>
               <div className="flex flex-col md:gap-4 gap-3 justify-center">
                 <div className="flex md:gap-4 gap-3 items-center">

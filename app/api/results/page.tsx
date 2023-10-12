@@ -1,19 +1,10 @@
+import Header from "@/components/Shared/Header";
 import Link from "next/link";
 
 export default async function Results() {
-  const subscriber = "";
-
   return (
     <>
-      <nav className="h-16 bg-white w-screen">
-        <div className="max-w-[70rem] h-full px-4 md:px-20 flex items-center justify-start">
-          <img
-            className="w-auto h-[50%]"
-            src="https://i.imgur.com/QyeUMCo.png"
-            alt="logo"
-          />
-        </div>
-      </nav>
+      <Header />
 
       <main className="overflow-x-hidden font-300 font-sans">
         <section className="flex flex-row flex-wrap gap-y-10 justify-center gap-x-32 w-100 px-[5vw] py-32 w-100 bg-[#0f747f]">
@@ -26,7 +17,7 @@ export default async function Results() {
               ease your comfort
             </p>
             <Link
-              href={`/checkout/${subscriber}`}
+              href="/api/checkout"
               className="next-page-btn bg-black text-white p-[1em_2em] ml-[2em] rounded-[5em] mb-[1em] w-[15em] mt-[2em] border-none text-lg"
               type="button"
             >
@@ -274,7 +265,7 @@ export default async function Results() {
           </div>
           <div className="flex justify-center">
             <Link
-              href={`/checkout/${subscriber}`}
+              href="/api/checkout"
               className="next-page-btn bg-black text-white p-[1em_2em] ml-[2em] rounded-[5em] mb-[1em] w-[15em] mt-[2em] border-none text-lg"
               type="button"
             >
@@ -894,7 +885,7 @@ export default async function Results() {
           </div>
           <div className="w-100 flex flex-col justify-center items-center">
             <Link
-              href={`/checkout/${subscriber}`}
+              href="/api/checkout"
               className="next-page-btn"
               type="button"
               // style="
@@ -990,7 +981,7 @@ export default async function Results() {
                 Bala Probiotics, and we want you to believe in them too.
               </p>
               <Link
-                href={`/checkout/${subscriber}`}
+                href="/api/checkout"
                 className="next-page-btn sm:mx-auto bg-black text-white p-[1em_2em] ml-[2em] rounded-[5em] mb-[1em] w-[15em] mt-[2em] border-none text-lg"
                 type="button"
               >

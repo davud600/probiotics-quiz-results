@@ -8,7 +8,7 @@ import { useEffect } from "react";
 async function startCheckout(
   quantity: number | string,
   variantId: number | string = 45489774362907,
-  sellingPlanId: number | string = ""
+  sellingPlanId: string = ""
 ) {
   const windowReference = window.open();
 
@@ -97,7 +97,7 @@ export default function CheckoutCards() {
         });
 
         if (!oneTime) {
-          startCheckout(1, 45489774362907, 689544823067);
+          startCheckout(1, 45489774362907, "689544823067");
         } else {
           startCheckout(1);
         }
@@ -120,7 +120,7 @@ export default function CheckoutCards() {
         });
 
         if (!oneTime) {
-          startCheckout(1, 46964244021531, 689548624155);
+          startCheckout(1, 46964244021531, "689548624155");
         } else {
           startCheckout(1, 46964244021531);
         }
@@ -143,7 +143,7 @@ export default function CheckoutCards() {
         });
 
         if (!oneTime) {
-          startCheckout(1, 46964311851291, 689548656923);
+          startCheckout(1, 46964311851291, "689548656923");
         } else {
           startCheckout(1, 46964311851291);
         }

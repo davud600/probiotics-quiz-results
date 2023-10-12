@@ -1,17 +1,19 @@
+import { SHOPIFY_API_URL } from "@/constants/api-urls";
+
 export const ShopifyService = {
   createCheckout: async (
-    sellingPlanId: string | number,
     quantity: string | number,
-    variantId: string | number
-  ) => {
-    const url = `https://shopify-quiz-checkout-app-production.up.railway.app/api/create-checkout?quantity=${quantity}&variantId=${variantId}${
+    variantId: string | number,
+    sellingPlanId: string = ""
+  ): Promise<string> => {
+    const url = `${SHOPIFY_API_URL}/create-checkout?quantity=${quantity}&variantId=${variantId}${
       sellingPlanId ? "&sellingPlanId=" + sellingPlanId : ""
     }`;
 
     const res = await fetch(url, {
       method: "get",
       headers: {
-        "Content-Typ": "application/json",
+        "Content-Type": "application/json",
       },
     });
 

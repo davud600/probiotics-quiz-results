@@ -1,4 +1,3 @@
-// Prices
 export const PRODUCT_PRICES = {
   "product-1": {
     oneTime: 59.9,

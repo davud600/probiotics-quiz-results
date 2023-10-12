@@ -31,13 +31,14 @@ export default function CountDownTimer() {
           const now = new Date().getTime(),
             distance = countDown - now;
 
-          document.getElementById("hours")!.innerText = Math.floor(
-            (distance % day) / hour
-          ).toString();
-          document.getElementById("minutes")!.innerText = Math.floor(
-            (distance % hour) / minute
-          ).toString();
-          document.getElementById("seconds")!.innerText = Math.floor(
+          const hours = document.getElementById("hours");
+          const minutes = document.getElementById("minutes");
+          const seconds = document.getElementById("seconds");
+          if (!!!hours || !!!minutes || !!!seconds) return;
+
+          hours.innerText = Math.floor((distance % day) / hour).toString();
+          minutes.innerText = Math.floor((distance % hour) / minute).toString();
+          seconds.innerText = Math.floor(
             (distance % minute) / second
           ).toString();
         }, 0);

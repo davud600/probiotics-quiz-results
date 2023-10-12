@@ -3,15 +3,7 @@ import { ManyChatService } from "@/services/manychat";
 import { type Subscriber } from "@/types/subscriber";
 import Link from "next/link";
 
-export default async function Results({
-  params,
-}: {
-  params: { subscriberId: string };
-}) {
-  const subscriber: Subscriber = await ManyChatService.getSubscriberInfo(
-    params.subscriberId
-  );
-
+export default async function Results() {
   return (
     <>
       <Header />
@@ -27,7 +19,7 @@ export default async function Results({
               ease your comfort
             </p>
             <Link
-              href={`/checkout/${params.subscriberId}`}
+              href="/checkout"
               className="next-page-btn bg-black text-white p-[1em_2em] ml-[2em] rounded-[5em] mb-[1em] w-[15em] mt-[2em] border-none text-lg"
               type="button"
             >
@@ -275,7 +267,7 @@ export default async function Results({
           </div>
           <div className="flex justify-center">
             <Link
-              href={`/checkout/${params.subscriberId}`}
+              href="/checkout"
               className="next-page-btn bg-black text-white p-[1em_2em] ml-[2em] rounded-[5em] mb-[1em] w-[15em] mt-[2em] border-none text-lg"
               type="button"
             >
@@ -895,7 +887,7 @@ export default async function Results({
           </div>
           <div className="w-100 flex flex-col justify-center items-center">
             <Link
-              href={`/checkout/${params.subscriberId}`}
+              href="/checkout"
               className="next-page-btn"
               type="button"
               // style="
@@ -991,7 +983,7 @@ export default async function Results({
                 Bala Probiotics, and we want you to believe in them too.
               </p>
               <Link
-                href={`/checkout/${params.subscriberId}`}
+                href="/checkout"
                 className="next-page-btn sm:mx-auto bg-black text-white p-[1em_2em] ml-[2em] rounded-[5em] mb-[1em] w-[15em] mt-[2em] border-none text-lg"
                 type="button"
               >
