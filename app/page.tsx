@@ -1,6 +1,10 @@
 "use client";
 
+import { useEffect } from "react";
+
 export default function Home() {
-  if (!!!window) return;
-  window.location.href = "https://balanutritions.com/pages/quiz";
+  useEffect(() => {
+    if (!!!window) return;
+    window.location.href = "https://balanutritions.com/pages/quiz";
+  }, []);
 }
